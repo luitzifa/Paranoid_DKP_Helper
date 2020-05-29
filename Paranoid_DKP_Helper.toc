@@ -1,7 +1,7 @@
-## Interface: 11303
+## Interface: 11304
 ## Title: Paranoid_DKP_Helper
 ## Author: Luitzifa
-## Version: 1.5
+## Version: 1.6
 
 loot_table.lua
 main_functions.lua
