@@ -17,7 +17,7 @@ We have no claim that the data is comprehensive or ready to use for anyone excep
 
 Todos:
 * Make data editable and extendable.
-*Synchonization of Data.
+* Synchonization of Data.
 
 Highly inspired by Addon: Checkmate Guild - Herod - Loot Priority Tooltips
 

@@ -51,6 +51,9 @@ end
 
 GameTooltip:HookScript("OnTooltipSetItem", function(tooltip, ...)
   local itemname, itemlink = tooltip:GetItem()
+  if not itemlink then
+	return
+  end
   local id = itemlink:match("item:(%d+):")
   ret = multi_table_search(id, { Paranoid_loot_table, Paranoid_prof_table})
   if not ret then
@@ -61,6 +64,9 @@ end)
 
 ItemRefTooltip:HookScript("OnTooltipSetItem", function(tooltip, ...)
   local itemname, itemlink = tooltip:GetItem()
+  if not itemlink then
+	return
+  end
   local id = itemlink:match("item:(%d+):")
   ret = multi_table_search(id, { Paranoid_loot_table, Paranoid_prof_table})
   if not ret then
@@ -71,10 +77,12 @@ end)
 
 GameTooltip:HookScript("OnTooltipSetSpell", function(tooltip)
   local id = select(2, tooltip:GetSpell())
-  if id then
-    ret = search_for_unit(id, Paranoid_prof_table)
+  if not id then
+	return
   end
-  if ret then
-	build_tooltip(tooltip, ret)
+  ret = search_for_unit(id, Paranoid_prof_table)
+  if not ret then
+    return
   end
+  build_tooltip(tooltip, ret)
 end)
