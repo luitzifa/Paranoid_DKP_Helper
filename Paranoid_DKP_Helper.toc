@@ -4,5 +4,5 @@
 ## Version: 1.6
 
 loot_table.lua
-main_functions.lua
+prof_table.lua
 loot_prio_hook.lua
